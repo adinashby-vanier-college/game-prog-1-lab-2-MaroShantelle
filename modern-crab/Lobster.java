@@ -14,5 +14,35 @@ public class Lobster extends Actor
      */
     public void act()
     {
+        if (Greenfoot.isKeyDown("d")) {
+            move(5);
+        }
+        else {
+            move(-5);
+        }
+        if (Greenfoot.isKeyDown("a")) {
+            move(-5);
+        }
+        else {
+            move(5);
+        }
+        if (Greenfoot.isKeyDown("w")) {
+            move(4);
+        }
+        if (Greenfoot.isKeyDown("w")) {
+            turn(3);
+        }
+        if (Greenfoot.isKeyDown("s")) {
+            turn(-3);
+        }
+        if (Greenfoot.isKeyDown("s")) {
+            move(-4);
+        }
+        if (isAtEdge()) {
+            turn(4);
+        }
+        if (isTouching(Crab.class)) {
+            move(-8);
+        }
     }
 }
